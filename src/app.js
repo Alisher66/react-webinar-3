@@ -14,7 +14,7 @@ function App({store}) {
         return count === 0 ? "" : ` | Выделяли ${count} ${getManyOrSingle(count)}`
     }
     const getManyOrSingle = (count) => {
-        if (count === 12 || count === 14) return "раз"
+        if (count >= 12 && count <= 14) return "раз"
         let res = count % 10;
         if (res >= 2 && res <= 4) return "раза"
         else return "раз"
